@@ -1,0 +1,26 @@
+nav {
+  height: 50px;
+}
+.navigation {
+  z-index: 99;
+  padding: 1rem 3rem;
+  background: rgb(48, 14, 119);
+  background: linear-gradient(
+    90deg,
+    rgba(48, 14, 119, 1) 0%,
+    rgba(54, 13, 120, 1) 11%,
+    rgba(66, 11, 122, 1) 28%,
+    rgba(76, 10, 124, 1) 38%,
+    rgba(88, 9, 126, 1) 47%,
+    rgba(96, 7, 127, 1) 61%,
+    rgba(107, 5, 129, 1) 70%,
+    rgba(112, 5, 130, 1) 77%
+  );
+  position: fixed;
+  width: 100%;
+}
+@media (max-width: 350px) {
+  .navigation{
+    padding: 1rem
+  }
+}
