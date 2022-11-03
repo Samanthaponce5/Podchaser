@@ -2,17 +2,18 @@ import React from 'react'
 import moment from 'moment'
 
 export default function Podcast({ podcast }) {
-  const date = new Date(podcast.entity.start_date)
+  const {start_date, image_url, title, description} = podcast.entity
+  const date = new Date(start_date)
 
   return (
     <li>
-      <img src={podcast.entity.image_url} alt={podcast.entity.image_url} />
+      <img src={image_url} alt={image_url} />
 
       <div className="info">
-        <h3>{podcast.entity.title}</h3>
+        <h3>{title}</h3>
         <div>
           <span>{moment(date).format('MMMM Do, YYYY')}</span> <b>•</b>
-          <span> {podcast.entity.description} </span>
+          <span> {description} </span>
         </div>
       </div>
     </li>
